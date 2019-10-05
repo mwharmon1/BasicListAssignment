@@ -11,7 +11,18 @@ def make_list():
     this function will call get_input()
     :return: list
     """
-    pass
+    num_list = []
+    tries = 3
+    for i in range(tries):
+        try:
+            number = get_input()
+        except ValueError:
+            print("Numbers Only")
+        else:
+            number = int(number)
+            num_list[len(num_list):] = [number]
+    return num_list
+    # pass
 
 
 def get_input():
