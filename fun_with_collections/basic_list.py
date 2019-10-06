@@ -14,15 +14,14 @@ def make_list():
     num_list = []
     tries = 3
     for i in range(tries):
+        number = get_input()
         try:
-            number = get_input()
-        except ValueError:
-            print("Numbers Only")
-        else:
             number = int(number)
+        except ValueError:
+            print("Numbers Only.")
+        else:
             num_list[len(num_list):] = [number]
     return num_list
-    # pass
 
 
 def get_input():
@@ -30,8 +29,9 @@ def get_input():
     this function will prompt user for input
     :return: string input
     """
-    pass
+    number = input("Enter a number: ")
+    return number
 
 
 if __name__ == '__main__':
-    make_list()
+    print(make_list())
