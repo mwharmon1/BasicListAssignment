@@ -10,7 +10,6 @@ def sort_list(my_list):
     """
     sort a list input by the user
     :param my_list: list input by the user
-    :return: sorted list
     """
     pass
 
@@ -22,9 +21,14 @@ def search_list(my_list, number):
     :param number:
     :return: index of number in list or -1 if not found it list
     """
-    pass
+    try:
+        index_of_number = my_list.index(number)
+    except ValueError:
+        return -1
+    else:
+        return index_of_number
 
 
 if __name__ == '__main__':
     search_list()
-
+    sort_list()
