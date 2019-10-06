@@ -11,7 +11,10 @@ def sort_list(my_list):
     sort a list input by the user
     :param my_list: list input by the user
     """
-    pass
+    try:
+        my_list.sort()
+    except ValueError:
+        raise ValueError
 
 
 def search_list(my_list, number):
@@ -31,4 +34,6 @@ def search_list(my_list, number):
 
 if __name__ == '__main__':
     search_list()
-    sort_list()
+    my_list = [6, 5, 4]
+    sort_list(my_list)
+    print(my_list)

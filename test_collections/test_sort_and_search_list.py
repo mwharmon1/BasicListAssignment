@@ -12,8 +12,11 @@ class MyTestCase(unittest.TestCase):
 
     # sort_list test
     def test_sort_list(self):
-        self.assertEqual(s.sort_list([10, 1, 7]), [1, 7, 10])
+        self.assertEqual(s.sort_list([10, 1, 7]), None)
 
+        # since the sort function does not create a new list
+        # it only sorts the current list. The return value of
+        # sort_list is None. I am not returning a new list
 
 
 
