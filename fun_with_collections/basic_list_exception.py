@@ -1,6 +1,6 @@
 """
 Author: Michael Harmon
-Date: 10/05/2019
+Date: 10/06/2019
 Description: This program will ask for user input and display
 the input in a list.
 """
