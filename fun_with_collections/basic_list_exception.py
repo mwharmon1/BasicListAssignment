@@ -14,13 +14,15 @@ def make_list():
     num_list = []
     tries = 3
     for i in range(tries):
-        number = get_input()
         try:
-            number = int(number)
+            number = int(get_input())
         except ValueError:
-            print("Numbers Only.")
+            raise ValueError("Numbers Only.")
         else:
-            num_list[len(num_list):] = [number]
+            if number < 1 or number > 50:
+                raise ValueError("Numbers between 1 and 50 only.")
+            else:
+                num_list[len(num_list):] = [number]
     return num_list
 
 
@@ -31,7 +33,6 @@ def get_input():
     """
     number = input("Enter a number: ")
     return number
-
 
 
 if __name__ == '__main__':
